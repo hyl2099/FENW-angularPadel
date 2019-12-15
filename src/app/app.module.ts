@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
-import { BannerComponent } from './banner/banner.component';
 import { IndexcontentComponent } from './indexcontent/indexcontent.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { InstalacionesComponent } from './instalaciones/instalaciones.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +20,6 @@ import {AppRoutingModule} from './app-routing.module';
     AppComponent,
     FooterComponent,
     MenuComponent,
-    BannerComponent,
     IndexcontentComponent,
     ServiciosComponent,
     InstalacionesComponent,
@@ -32,7 +31,10 @@ import {AppRoutingModule} from './app-routing.module';
     BrowserModule,
     FormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
