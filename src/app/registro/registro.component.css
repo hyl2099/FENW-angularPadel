@@ -1,0 +1,46 @@
+/*rigister*/
+#registro{
+  width: auto;
+  height: 600px;
+  opacity: 0.9;
+  border: 1px solid #9F9F9F;
+  text-align: center;
+  align-items: center;
+}
+#backgroud_gray{
+  background: #6c757d;
+  opacity: 0.8;
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+  outline-offset: 10px;
+}
+#outline{
+  width: 100%;
+  outline-color: #b9bbbe;
+  outline-offset: 10px;
+}
+#item{
+  margin-top: 50px;
+  float:left;
+  text-align: right;
+  width: 30%;
+}
+#registro_form{
+  margin-top: 50px;
+  float: right;
+  width: 70%;
+  text-align: left;
+}
+
+ul{
+  list-style-type:none;
+}
+
+input{
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #b9bbbe;
+  width: 60%;
+}

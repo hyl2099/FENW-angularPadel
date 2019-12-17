@@ -1,0 +1,26 @@
+<div id="texto" class="container-fluid" [ngStyle]="{'background-image': 'url(' + background+ ')'}">
+  <div id="registro" class="registro">
+    <div id="table_login">
+      <div id="login_backgroud">
+        <form [formGroup]="formModel"  (submit)="login()" style="background-color: #6c757d;margin-top: 100px">
+          <div ng-app="" class="input-group mb-3">
+            <br>
+            <br>
+            <input  id="user" formControlName="username" name="username" class="form-control input_user"  placeholder="Usuario" type="text" >
+            <br>
+            <br>
+          </div>
+          <div class="input-group mb-3">
+            <input  id="password" formControlName="password" name="password" class="form-control input_pass"  placeholder="Contraseña" type="password" >
+            <br>
+            <br>
+          </div>
+          <div class="d-flex justify-content-center mt-3 login_container">
+            <button class="btn login_btn" id="login_button" name="" type="submit" style="position: center">login</button>
+            <br><br>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

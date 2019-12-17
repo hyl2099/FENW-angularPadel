@@ -1,0 +1,60 @@
+<!--<div id="head" class="container">-->
+<!--  <div class="head_logo l">-->
+<!--&lt;!&ndash;    数据绑定，js中定义myImage&ndash;&gt;-->
+<!--    <img src="{{myImage}}"/>-->
+<!--  </div>-->
+<!--  <div class="head_text r">-->
+<!--    <p>Pádel U.P.M.</p>-->
+<!--  </div>-->
+
+<!--  <ul class="head_menu l">-->
+<!--    <li>-->
+<!--      <a href="index.html">Inicio</a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <a href="servicios.html">Servicios</a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <a href="instalaciones.html">Instalaciones</a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <a href="reservas.html">Reservas</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+<div id="head" class="container">
+  <div class="head_logo l">
+    <a href="#">
+      <img src="{{myImage}}" alt="UPM" title="UPM">
+    </a>
+  </div>
+  <div class="head_text r">
+    <p>Pádel U.P.M.</p>
+  </div>
+
+  <ul class="head_menu l">
+    <li>
+      <a href="inicio()">Inicio</a>
+<!--      <a routerLink="inicio">Inicio</a>-->
+    </li>
+    <li>
+      <a href="servicios()">Servicios</a>
+    </li>
+    <li>
+      <a href="instalaciones()">Instalaciones</a>
+    </li>
+    <li>
+      <a href="reservas()">Reservas</a>
+    </li>
+  </ul>
+
+  <div class="head_login r">
+    <ul class="nav justify-content-end">
+      <li id="register" class="nav-item"><a class="nav-link" href="registro()" *ngIf="showlogin">Registro</a></li>
+      <li id="login" class="nav-item"><a class="nav-link" href="login()" *ngIf="showlogin">Login</a></li>
+      <li id="username" class="nav-item"><a class="nav-link" *ngIf="showlogout">{{username}}</a></li>
+      <li id="logout" class="nav-item"><a class="nav-link" href="inicio()" (click)="logout()" *ngIf="showlogout">Logout</a></li>
+    </ul>
+  </div>
+</div>

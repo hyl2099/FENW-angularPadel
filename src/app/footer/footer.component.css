@@ -1,0 +1,23 @@
+#foot {
+  background-color: #D7DBD8;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  float: bottom;
+  text-align: center;
+}
+
+#foot .container {
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color: #646464;
+  text-align: center;
+}
+
+#foot a {
+  font-size: 14px;
+  color: #646464;
+  text-align: center;
+}
