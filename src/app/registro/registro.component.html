@@ -3,16 +3,19 @@
     <div id="table_registro">
       <div id="backgroud_gray">
         <div id="outline">
+
           <form [formGroup]="formModel"  (submit)="register()" style="background-color: #6c757d;margin-top: 100px">
             <div ng-app="" class="input-group mb-3">
               <br>
               <br>
-              <input  id="user" formControlName="username" name="username" class="form-control input_user"  placeholder="Usuario" type="text" >
+              <input  id="user" formControlName="username" name="username" class="form-control input_user"  placeholder="Usuario" type="text" (blur)="checkUser()">
+              <p id = "rigisterfinish" *ngIf="showregister">Termiado Registro!</p>
               <br>
               <br>
             </div>
             <div ng-app="" class="input-group mb-3">
               <input  id="email" formControlName="email" name="email" class="form-control input_pass"  placeholder="Email" type="text" >
+
               <br>
               <br>
             </div>
@@ -23,10 +26,12 @@
             </div>
             <div ng-app="" class="input-group mb-3">
               <input  id="repeatpassword" formControlName="repeatpassword" name="repeatpassword" class="form-control input_pass"  placeholder="Repeat Password" type="password" >
+              <p id="wrongpassword" *ngIf="showwrong">The 2 passwords are different...</p>
               <br>
               <br>
             </div>
             <div class="d-flex justify-content-center mt-3 login_container">
+              <p id = "rigisterexists" *ngIf="showrexists">Ya existe el usuario Registrado!</p>
               <button class="btn login_btn" id="register_button" name="" type="submit" style="position: center">Registrar</button>
               <br><br>
             </div>
