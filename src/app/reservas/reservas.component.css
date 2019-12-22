@@ -7,6 +7,13 @@ input{
   outline-style: solid;
   outline-width: 1px;
   outline-color: #b9bbbe;
+  width: 56%;
+}
+
+select{
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #b9bbbe;
   width: 60%;
 }
 

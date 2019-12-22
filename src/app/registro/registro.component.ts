@@ -42,7 +42,7 @@ export class RegistroComponent implements OnInit {
         response => {
           this.showrexists = true;
         },
-        error1 => {
+        error => {
           if(status === '404'){
           this.showrexists = false;
         }});

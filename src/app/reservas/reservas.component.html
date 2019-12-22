@@ -5,16 +5,51 @@
         <div id="outline">
           <form [formGroup]="formModel"  (submit)="reserve()" style="background-color: #6c757d;margin-top: 100px">
             <div ng-app="" class="input-group mb-3">
-              <input   id="time" formControlName="time" name="time" class="form-control input_pass"  placeholder="Tiempo" type="text" >
+              <input matInput  [matDatepicker]="picker" id="day"  name="day" class="form-control input_pass"  formControlName="day" placeholder="Dia" type="text" >
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+<!--              formControlName="day"-->
               <br>
               <br>
             </div>
             <div ng-app="" class="input-group mb-3">
-<!--              <input  id="num" formControlName="num" name="num" class="form-control input_pass"  placeholder="Court ID" type="text" >-->
+<!--              <select   id="time" formControlName="time" name="time" class="form-control input_pass"  placeholder="Tiempo" type="text" >-->
+
+              <select id="time" formControlName="time" name="time"class="form-control input_pass" >
+                <option value="">--Elegir tiempo--</option>
+                <option value="9:00-10:00">09:00-10:00</option>
+                <option value="10:00-11:00">10:00-11:00</option>
+                <option value="11:00-12:00">11:00-12:00</option>
+                <option value="12:00-13:00">12:00-13:00</option>
+                <option value="13:00-14:00">13:00-14:00</option>
+                <option value="14:00-15:00">14:00-15:00</option>
+                <option value="15:00-16:00">15:00-16:00</option>
+                <option value="16:00-17:00">16:00-17:00</option>
+                <option value="17:00-18:00">17:00-18:00</option>
+                <option value="18:00-19:00">18:00-19:00</option>
+                <option value="19:00-20:00">19:00-20:00</option>
+                <option value="20:00-21:00">20:00-21:00</option>
+              </select>
+              <br>
+              <br>
+            </div>
+            <div ng-app="" class="input-group mb-3">
+<!--              <input  id="num" formControlName="num" name="num" class="form-control input_pass"  placeholder="Court ID" type="text" ng-model="fLevelBefore">-->
+              <select id="num" formControlName="num" name="num"class="form-control input_pass" >
+                <option value="">--Elegir Court--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
               <br>
               <br>
             </div>
             <div class="d-flex justify-content-center mt-3 login_container">
+              <p *ngIf="showreserved">Reserva terminado: {{day}} {{time}} {{num}}</p>
+              <p *ngIf="showtokenerror">Log in por favor!</p>
+              <p *ngIf="showmaxsimum">Has Reservado 4 veces ya!</p>
+              <p *ngIf="showdateerror">Rellena dia o tiempo!</p>
               <button class="btn login_btn" id="register_button" name="" type="submit" style="position: center">Registrar</button>
               <br><br>
             </div>
@@ -26,3 +61,5 @@
 
   </div>
 </div>
+
+
